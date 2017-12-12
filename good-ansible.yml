@@ -26,3 +26,10 @@
   roles:
     - deploy-app
 
+- name: deploy postgres
+  gather_facts: false
+  become: true
+  hosts: appdbs
+  roles:
+    - deploy-db
+
