@@ -1,0 +1,11 @@
+  - name: copy static index.html to app1 tomcat webapps/ansible/index.html
+    template:
+      src: index.html.app1
+      dest: /usr/share/tomcat/webapps/ansible/index.html
+    when: ansible_hostname == "ip-192-199-0-26"
+
+  - name: copy static index.html to app2 tomcat webapps/ansible/index.html
+    template:
+      src: index.html.app2
+      dest: /usr/share/tomcat/webapps/ansible/index.html
+    when: ansible_hostname == "ip-192-199-0-162"
