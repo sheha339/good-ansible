@@ -1,5 +1,5 @@
 - name: configure repo on all hosts
-  hosts: all
+  hosts: all:!windows
   gather_facts: false
   become: true
   roles:
@@ -32,4 +32,3 @@
   hosts: appdbs
   roles:
     - deploy-db
-
